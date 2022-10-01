@@ -1,0 +1,104 @@
+.Wrapper {
+    --Search-height: 46px;
+    --search-btn-width: 52px;
+    --Search-border-radius: 92px;
+    --Search-top-spacer: 9px;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: var(--default-layout-higher);
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: var(--default-layout-width);
+    padding: 0px 24px;
+}
+
+.Search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: var(--Search-height);
+    background: rgba(22, 24, 35, 0.06);
+    border-radius: var(--Search-border-radius);
+    padding-left: 16px;
+    border: 1.5px solid transparent;
+
+    input {
+        flex: 1;
+        height: 100%;
+        background: transparent;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        caret-color: red;
+    }
+
+    &:focus-within {
+        border-color: rgba(22, 24, 35, 0.34);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: calc(var(--Search-height) - var(--Search-top-spacer) * 2);
+        top: var(--Search-top-spacer);
+        right: var(--search-btn-width);
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+}
+.Search-result,
+.Search {
+    width: 361px;
+}
+
+input:not(:placeholder-shown) ~ .Search-btn {
+    color: rgba(22, 24, 35, 0.75);
+}
+
+.Search-title {
+    height: 30px;
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+}
+
+.close,
+.Loading {
+    font-size: 1.6rem;
+    color: rgba(22, 24, 35, 0.34);
+    position: absolute;
+    right: calc(var(--search-btn-width) + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close {
+    padding: 0px;
+}
+
+.Search-btn {
+    width: 52px;
+    height: var(--Search-height);
+    border-top-right-radius: var(--Search-border-radius);
+    border-bottom-right-radius: var(--Search-border-radius);
+    font-size: 2rem;
+    border: 1.5px solid transparent;
+    color: rgba(22, 24, 35, 0.34);
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+
+    &:active {
+        background: rgba(22, 24, 35, 0.06);
+    }
+}

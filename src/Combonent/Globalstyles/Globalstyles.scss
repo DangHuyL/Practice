@@ -4,6 +4,8 @@
     --primary: #fe2c55;
     --text-color: #161823;
     --white: #ffffff;
+    --black: #000;
+
     --default-layout-higher: 60px;
     --default-layout-width: 1150px;
     // default layout
@@ -23,6 +25,19 @@ body {
     font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 1.5;
+    color: var(--text-color);
+}
+
+button,
+input,
+[tabIndex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 // font emmbeded

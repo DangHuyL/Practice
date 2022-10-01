@@ -1,0 +1,14 @@
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Container {
+    display: flex;
+    width: var(--default-layout-width);
+}
+
+.Content {
+    flex: 1;
+}
