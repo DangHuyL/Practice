@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleXmark,
     faMagnifyingGlass,
+    faPlus,
     faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
@@ -13,6 +14,7 @@ import images from '~/assets/images';
 import styles from './Header.module.scss';
 import { Wrapper as PopperWrapper } from '~/Combonent/Popper';
 import AccountItem from '~/Combonent/AccountItem';
+import Button from '~/Combonent/Button';
 
 const cx = classNames.bind(styles);
 
@@ -20,7 +22,7 @@ function Header() {
     const [SearchShow, setSearchShow] = useState([]);
     useEffect(() => {
         setTimeout(() => {
-            setSearchShow([1, 2, 3]);
+            setSearchShow([]);
         }, 0);
     }, []);
     return (
@@ -63,7 +65,15 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx('active')}></div>
+                <div className={cx('active')}>
+                    <Button
+                        rectangle
+                        leftIcon={<FontAwesomeIcon icon={faPlus} />}
+                    >
+                        Upload
+                    </Button>
+                    <Button primary>Log in</Button>
+                </div>
             </div>
         </div>
     );
