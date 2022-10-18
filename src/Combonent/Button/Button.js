@@ -13,6 +13,7 @@ function Button({
     round = false,
     small = false,
     large = false,
+    disabled = false,
     className = false,
     leftIcon = false,
     rightIcon = false,
@@ -24,6 +25,13 @@ function Button({
         onClick,
         ...passProps,
     };
+    if (disabled) {
+        Object.keys(props).forEach((key) => {
+            if (key.startsWith('on') && typeof props[key] === 'function') {
+                delete props[key];
+            }
+        });
+    }
     if (to) {
         props.to = to;
         Comp = Link;
@@ -39,6 +47,7 @@ function Button({
         round,
         small,
         large,
+        disabled,
     });
 
     return (

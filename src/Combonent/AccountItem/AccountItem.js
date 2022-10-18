@@ -3,13 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 
 import styles from './AccountItem.module.scss';
+import Image from '../Image';
 
 const cx = classNames.bind(styles);
 
 function AccountItem() {
     return (
         <div className={cx('Wrapper')}>
-            <img
+            <Image
                 className={cx('avatar')}
                 src="https://scontent.fdad1-3.fna.fbcdn.net/v/t1.15752-9/309073835_605672617924571_4901306354283127960_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=tbaU4UoP-oAAX9b-nM6&_nc_ht=scontent.fdad1-3.fna&oh=03_AVICuytrUKG6SuAOPu-jd-M6STl45HJYr1RvhIFbT9zf_g&oe=635C9328"
                 alt="Avatar"

@@ -20,90 +20,30 @@
     padding: 0px 24px;
 }
 
-.Search {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: var(--Search-height);
-    background: rgba(22, 24, 35, 0.06);
-    border-radius: var(--Search-border-radius);
-    padding-left: 16px;
-    border: 1.5px solid transparent;
-
-    input {
-        flex: 1;
-        height: 100%;
-        background: transparent;
-        font-size: 1.6rem;
-        line-height: 2.2rem;
-        caret-color: red;
-    }
-
-    &:focus-within {
-        border-color: rgba(22, 24, 35, 0.34);
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        width: 1px;
-        height: calc(var(--Search-height) - var(--Search-top-spacer) * 2);
-        top: var(--Search-top-spacer);
-        right: var(--search-btn-width);
-        background-color: rgba(22, 24, 35, 0.12);
-    }
-}
-.Search-result,
-.Search {
-    width: 361px;
-}
-
-input:not(:placeholder-shown) ~ .Search-btn {
-    color: rgba(22, 24, 35, 0.75);
-}
-
-.Search-title {
-    height: 30px;
-    padding: 5px 12px;
-    font-size: 1.4rem;
-    line-height: 2rem;
-    font-weight: 600;
-    color: rgba(22, 24, 35, 0.5);
-}
-
-.close,
-.Loading {
-    font-size: 1.6rem;
-    color: rgba(22, 24, 35, 0.34);
-    position: absolute;
-    right: calc(var(--search-btn-width) + 16px);
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.close {
-    padding: 0px;
-}
-
-.Search-btn {
-    width: 52px;
-    height: var(--Search-height);
-    border-top-right-radius: var(--Search-border-radius);
-    border-bottom-right-radius: var(--Search-border-radius);
-    font-size: 2rem;
-    border: 1.5px solid transparent;
-    color: rgba(22, 24, 35, 0.34);
-
-    &:hover {
-        background: rgba(22, 24, 35, 0.03);
-    }
-
-    &:active {
-        background: rgba(22, 24, 35, 0.06);
-    }
-}
-
 .active {
     display: flex;
     align-items: center;
+}
+
+.more-btn {
+    width: 20px;
+    height: 20px;
+    padding: 0px 4px;
+    margin-left: 16px;
+    background-color: transparent;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.active-btn {
+    background-color: transparent;
+    margin-left: 19px;
+    padding: 0px;
+}
+
+.avatar_user {
+    width: 32px;
+    height: 32px;
+    margin-left: 24px;
+    border-radius: 50%;
 }
