@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { puplicRoutes } from './routes';
+import { puplicRoutes } from './routers';
 import { DefaultLayout } from './Combonent/Layouts';
 import { Fragment } from 'react';
 function App() {

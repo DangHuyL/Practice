@@ -56,7 +56,7 @@ function Menu({
                         {history.length > 1 && (
                             <Header tittle="Language" onBack={handleBackMenu} />
                         )}
-                        {renderItem()}
+                        <div className={cx('menu-body')}> {renderItem()}</div>
                     </PopperWrapper>
                 </div>
             )}

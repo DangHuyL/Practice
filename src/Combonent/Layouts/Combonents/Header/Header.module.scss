@@ -4,6 +4,11 @@
     --Search-border-radius: 92px;
     --Search-top-spacer: 9px;
 
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: var(--white);
+    z-index: 10;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -18,6 +23,10 @@
     height: 100%;
     width: var(--default-layout-width);
     padding: 0px 24px;
+}
+
+.logo {
+    display: flex;
 }
 
 .active {

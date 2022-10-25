@@ -21,6 +21,8 @@ import Menu from '~/Combonent/Popper/Menu';
 import { InboxIcon, MessageIcon } from '~/Combonent/Icon';
 import Image from '~/Combonent/Image';
 import Search from './Search';
+import { Link } from 'react-router-dom';
+import routes from '~/config/routes';
 
 const cx = classNames.bind(styles);
 
@@ -89,9 +91,9 @@ function Header() {
     return (
         <div className={cx('Wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
+                <Link to={routes.Home} className={cx('logo')}>
                     <img src={images.logo} alt="titok" />
-                </div>
+                </Link>
                 <Search />
                 <div className={cx('active')}>
                     <Button

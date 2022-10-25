@@ -1,3 +1,4 @@
+import routes from '~/config/routes';
 import Home from '~/Pages/Home';
 import Following from '~/Pages/Following';
 import Live from '~/Pages/Live';
@@ -7,12 +8,12 @@ import Search from '~/Pages/Search';
 import { HeaderOnly } from '~/Combonent/Layouts';
 
 const puplicRoutes = [
-    { path: '/', combonent: Home },
-    { path: '/following', combonent: Following },
-    { path: '/live', combonent: Live },
-    { path: '/profile', combonent: Profile },
-    { path: '/upload', combonent: Upload, layout: HeaderOnly },
-    { path: '/search', combonent: Search, layout: null },
+    { path: routes.Home, combonent: Home },
+    { path: routes.Following, combonent: Following },
+    { path: routes.Live, combonent: Live },
+    { path: routes.Profile, combonent: Profile },
+    { path: routes.Upload, combonent: Upload, layout: HeaderOnly },
+    { path: routes.Search, combonent: Search, layout: null },
 ];
 
 const privaticeRoutes = [];
